@@ -1,0 +1,50 @@
+
+#header{
+	width:100%;
+	height:70px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:2;
+}
+
+#header_logo{
+	width:235px;
+	height:222px;
+	position:absolute;
+	left:50%;
+	margin-left:-117px;
+	top:14px;
+}
+
+#header_holder_btns{
+	width:270px;
+	height:20px;
+	position:absolute;
+	left:50%;
+	margin-left:174px;
+	top:28px;
+	font-family:'Bemio';
+	font-size:12px;
+	color:#9f3c51;
+	line-height:20px;
+}
+
+
+.header_btn{
+	display:inline-block;
+	text-align:center;
+	padding-left:5px;
+	padding-right:5px;
+	cursor:pointer;
+}
+
+.header_btn:hover{
+	color:#C0586D;
+}
+
+.header_btn_selected{
+	color:#FFF !important;
+	cursor:default;
+}
+

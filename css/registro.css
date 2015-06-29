@@ -1,0 +1,153 @@
+
+#registro{
+	color:#FFF;
+}
+
+#registro_texto{
+	width:335px;
+	position:absolute;
+	left:50%;
+	margin-left:-167px;
+	top:193px;
+	font-family:'HelveticaRegular';
+	font-size:19px;
+	color:#f9e303;
+	text-align:center;
+	line-height:23px;
+}
+
+#registro_holder_inputs{
+	width:755px;
+	position:absolute;
+	left:50%;
+	margin-left:-377px;
+	top:263px;
+}
+
+.registro_input_holder{
+	margin-left:15px;
+	display:inline-block;
+	margin-bottom:14px;
+}
+
+.registro_nombre_input{
+	font-family:'HelveticaBold';
+	font-size:12px;
+}
+
+.registro_input{
+	width:216px;
+	height:21px;
+	border:1px solid #FFD358;
+	border-radius:3px;
+	margin-top:7px;
+	padding-left:5px;
+	padding-right:5px;
+	font-family:'HelveticaBold';
+	font-size:12px;
+	color:#333;
+	/*color:#888888; placeholder*/
+}
+
+.registro_input_error{
+	border-color:#E11C17;
+	background: #FF7373;
+}
+
+#registro_holder_input_nombre{
+	margin-left:19px;
+}
+
+#registro_holder_input_email{
+	margin-left:141px;
+}
+
+.registro_input_telefono{
+	width:55px !important;
+	margin-right:5px;
+	text-align:center;
+}
+
+#registro_holder_inputs_factura{
+	background:url(../img/registro/bg_registro_factura.png);
+	border-radius:10px;
+	margin-top:22px;
+	padding-top:26px;
+	padding-bottom:13px;
+}
+
+#registro_factura_textos{
+	width:408px;
+	height:56px;
+	position:relative;
+	left:50%;
+	margin-left:-204px;
+	margin-top:-48px;
+	margin-bottom:39px;
+	background-image:url(../img/registro/textos_factura.png);
+}
+
+.registro_input_fecha{
+	width:64px; 
+	text-align:center;
+}
+
+#registro_input_holder_cantidad_punto{
+	font-size:22px;
+	margin-right:-1px;
+	margin-left:-1px;
+	display:inline-block;
+}
+.registro_input_cantidad{
+	width:90px;
+	text-align:right;
+}
+
+#registro_input_decimal{
+	text-align:left;
+}
+
+#registro_holder_checkboxs{
+	width:345px;
+	margin-top:30px;
+	font-family:'HelveticaRegular';
+	font-size:12px;
+	line-height:15px;
+}
+
+.registro_checbox{
+	margin-right:5px;
+	position:relative;
+	float:left;
+	z-index:1;
+}
+
+.registro_checkbox_texto{
+	position:relative;
+	top:3px;	
+}
+
+#registro_checkbox_separador{
+	clear:both;		
+}
+
+#registro_tyc_btn{
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+
+
+.registro_continuar_btn{
+	width:127px;
+	height:31px;
+	position:relative;
+	float:right;
+	margin-top:-32px;
+}
+
+.registro_factura_continuar_btn{
+	margin-right:313px !important;
+	margin-top:40px !important;
+}
+

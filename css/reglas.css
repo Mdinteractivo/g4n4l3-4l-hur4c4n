@@ -1,0 +1,50 @@
+
+#reglas{
+	
+}
+
+#reglas_placa{
+	width:630px;
+	height:360px;
+	position:absolute;
+	left:50%;
+	margin-left:-315px;
+	top:198px;
+	background:url(../img/reglas/bg_placa.png);
+	border-radius:15px;
+}
+
+
+#reglas_titulo{
+	text-align:center;
+	font-family:'BemioItalic';
+	font-size:18px;
+	color:#f9e303;
+	margin-top:19px;
+}
+
+#reglas_holder_texto{
+	width:540px;/*614px;*/
+	height:282px;
+	position:absolute;
+	left:50%;
+	margin-left:-270px;
+	top:58px;
+	font-family:Arial;
+	font-size:13px;
+	line-height:20px;
+	overflow:hidden; 
+}
+
+#reglas_texto_perse{
+	width:95%;
+}
+
+#reglas_regresar_btn{
+	width:131px;
+	height:31px;
+	position:absolute;
+	left:45px;
+	top:17px;
+}
+

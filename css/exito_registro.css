@@ -1,0 +1,59 @@
+
+#exito_registro{
+	
+}
+
+#exito_registro_tornado{
+	width:520px;
+	height:505px;
+	position:absolute;
+	left:50%;
+	margin-left:-262px;
+	top:-32px;
+	-webkit-transform-origin:251px 299px;
+	transform-origin:251px 299px;
+}
+
+
+#exito_registro_logo{
+	width:172px;
+	height:142px;
+	position:absolute;
+	left:50%;
+	margin-left:-84px;
+	top:194px;
+}
+
+#exito_registro_texto1{
+	width:380px;
+	height:22px;
+	position:absolute;
+	left:50%;
+	margin-left:-190px;
+	top:344px;
+}
+
+#exito_registro_texto2{
+	width:576px;
+	position:absolute;
+	left:50%;
+	margin-left:-288px;
+	top:385px;
+	font-family:'HelveticaRegular';
+	font-size:16px;
+	text-align:center;
+	line-height:22px;
+}
+
+
+.exito_registro_navegar_btn{
+	width:112px;
+	height:28px;
+	position:absolute;
+	left:50%;
+	top:520px;
+}
+
+#exito_registro_inicio_btn{
+	margin-left:-56px;
+}
