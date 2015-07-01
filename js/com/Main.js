@@ -2,6 +2,12 @@
 function Main(){
 	this.main = document.getElementById('main');
 
+	try{
+		StatusBar.hide();	
+	}catch(e){
+
+	}
+
 	var header = new Header();
 
 	var arr_secciones = new Array();
