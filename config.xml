@@ -28,22 +28,22 @@
 
 
     <!-- iPad -->
-    <icon src="http://www.ganalealhuracan.com/ipad/resources/icons/icon-76.png" gap:platform="ios" width="76" height="76" />
-    <icon src="http://www.ganalealhuracan.com/ipad/resources/icons/icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+    <icon src="resources/icons/icon-76.png" gap:platform="ios" width="76" height="76" />
+    <icon src="resources/icons/icon-76@2x.png" gap:platform="ios" width="152" height="152" />
     <!-- Settings Icon -->
-    <icon src="http://www.ganalealhuracan.com/ipad/resources/icons/icon-small.png" gap:platform="ios" width="29" height="29" />
-    <icon src="http://www.ganalealhuracan.com/ipad/resources/icons/icon-small@2x.png" gap:platform="ios" width="58" height="58" />
+    <icon src="resources/icons/icon-small.png" gap:platform="ios" width="29" height="29" />
+    <icon src="resources/icons/icon-small@2x.png" gap:platform="ios" width="58" height="58" />
     <!-- Spotlight Icon -->
-    <icon src="http://www.ganalealhuracan.com/ipad/resources/icons/icon-40.png" gap:platform="ios" width="40" height="40" />
-    <icon src="http://www.ganalealhuracan.com/ipad/resources/icons/con-40@2x.png" gap:platform="ios" width="80" height="80" />
+    <icon src="resources/icons/icon-40.png" gap:platform="ios" width="40" height="40" />
+    <icon src="resources/icons/con-40@2x.png" gap:platform="ios" width="80" height="80" />
 
 
 
  
     <!-- iPad -->
-    <gap:splash src="http://www.ganalealhuracan.com/ipad/resources/splash/Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
+    <gap:splash src="resources/splash/Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
     <!-- Retina iPad -->
-    <gap:splash src="http://www.ganalealhuracan.com/ipad/resources/splash/Default-Landscape@2x.png" gap:platform="ios" width="2048" height="1536" />
+    <gap:splash src="resources/splash/Default-Landscape@2x.png" gap:platform="ios" width="2048" height="1536" />
 
     
 </widget>
