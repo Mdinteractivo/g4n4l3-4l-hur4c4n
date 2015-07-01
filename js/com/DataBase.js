@@ -15,8 +15,12 @@ function DataBase(){
 		db.transaction(function (tx) {
 			tx.executeSql('SELECT * FROM participaciones WHERE sincronizado = "0"' , [],
 				function (tx, resultado) {
-						console.log(resultado);
-						callback(resultado.rows);
+						var data = new Array();
+						for(var i=0; i < resultado.rows.length;i++){
+							data.push(resultado.rows.item(i));
+						}
+						callback(data);
+						
     			}, onError);
 		});
 	}

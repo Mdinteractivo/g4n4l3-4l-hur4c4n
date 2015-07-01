@@ -62,7 +62,7 @@ function Sincronizador(){
 			url:Main.SERVER+'api/sincronizar-participaciones/',
 			type:'post',
 			cache:false,
-			data:'data='+json_encode(data),
+			data:{'data': data},
 			success:onSincronizoParticipaciones,
 			error:onErrorSincronizoParticipacines
 		});
