@@ -38,8 +38,8 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         Main.SERVER = 'http://192.168.235.153/ganale_al_huracan/public/';
-        Main.touchstart = 'mousedown';
-        Main.touchend = 'mouseup';
+        Main.touchstart = 'touchstart';
+        Main.touchend = 'touchend';
         Main.desde = 'T';
         
         var main = new Main();
