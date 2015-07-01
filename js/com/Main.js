@@ -17,7 +17,10 @@ function Main(){
 	var animando = false;
 	var param;
 
+	var sincronizador = new Sincronizador();
 
+	Main.db = new DataBase();
+	
 	Main.alerta = new ToastMessage();
 	$('body').append(Main.alerta.main);
 
@@ -43,33 +46,32 @@ function Main(){
 	}
 
 
-	function checkUsuarioFB(uid, access_token){
-		Main.loading.mostrar();
-		$.ajax({
-			url:'api/existe-usuario-fb/',
-			type:'post',
-			cache:false,
-			data:'uid='+uid+'&access_token='+access_token,
-			success: onCheckUsuarioFB
-		})
-	}
+	Main.hayInternet = function(){
 
-	function onCheckUsuarioFB(data){
-		Main.loading.ocultar();
-		if(data.error == 0){
-			
-			if(data.resultado == 1){
-				Main.usuario = data.usuario;
-				Main.navegar(1,true);
-			}else{
-				Main.usuario = new Usuario();
-				Main.usuario.uid = data.uid;
-				Main.usuario.nombre = data.nombre;
-				Main.usuario.apellido = data.apellido;
-				Main.navegar(1,false);
-			}
-		}
-	}
+     		try{
+            	var networkState = navigator.connection.type;
+	        }catch(e){
+				return true
+	        }
+            var states = {};
+            states[Connection.UNKNOWN]  = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI]     = 'WiFi connection';
+            states[Connection.CELL_2G]  = 'Cell 2G connection';
+            states[Connection.CELL_3G]  = 'Cell 3G connection';
+            states[Connection.CELL_4G]  = 'Cell 4G connection';
+            states[Connection.CELL]     = 'Cell generic connection';
+            states[Connection.NONE]     = 'No network connection';
+
+           
+            if(networkState == Connection.WIFI ||  networkState == Connection.CELL_3G || networkState == Connection.CELL_4G || networkState == Connection.WIFI){
+
+ 				return true
+
+            }
+
+        return false
+    }
 
 
 }

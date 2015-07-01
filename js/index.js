@@ -26,9 +26,9 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-       document.addEventListener('deviceready', this.onDeviceReady, false); 
+       //document.addEventListener('deviceready', this.onDeviceReady, false); 
         
-       //this.onDeviceReady(); //this is the browser
+       this.onDeviceReady(); //this is the browser
         
 
     },
@@ -38,7 +38,8 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         Main.SERVER = 'http://192.168.235.153/ganale_al_huracan/public/';
-        Main.touchstart = 'click';
+        Main.touchstart = 'mousedown';
+        Main.touchend = 'mouseup';
         Main.desde = 'T';
         
         var main = new Main();

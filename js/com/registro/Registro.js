@@ -54,7 +54,6 @@ function Registro(){
 
 	var continuar_btn = $(this.main).find('.registro_continuar_btn')[0];
 
-	var existe_usuario;
 	
 	$(tyc_btn).bind(Main.touchstart, onClickTYCBtn);
 	$(continuar_btn).bind(Main.touchstart, onClickContinuarBtn);
@@ -63,8 +62,6 @@ function Registro(){
 		if($existe_usuario != null){
 		
 			resetInputs();
-			
-			existe_usuario = $existe_usuario;
 			
 			$(self.main).removeClass('registro_existe_usuario');
 			$(texto).css('display','block');
@@ -93,51 +90,50 @@ function Registro(){
 	}
 
 	function onClickContinuarBtn(e){
-		Main.navegar(3);	
-
-		/*var todo_bien = true;
 		
-		if(!existe_usuario){
-			if(input_nombre.esVacio()){
-				todo_bien = false;
-				input_nombre.hayError();
-			}else{
-				input_nombre.estaBien();
-			}
-
-			if(input_apellido.esVacio()){
-				todo_bien = false;
-				input_apellido.hayError();
-			}else{
-				input_apellido.estaBien();
-			}
-
-			if(input_tel1.esVacio() || !input_tel1.estaLleno() || input_tel2.esVacio() || !input_tel2.estaLleno() || input_tel3.esVacio() || !input_tel3.estaLleno()){
-				todo_bien = false;
-				input_tel1.hayError();
-				input_tel2.hayError();
-				input_tel3.hayError();
-			}else{
-				input_tel1.estaBien();
-				input_tel2.estaBien();
-				input_tel3.estaBien();
-			}
-
-			if(input_email.esVacio() || !input_email.esMailValido()){
-				todo_bien = false;
-				input_email.hayError();
-			}else{
-				input_email.estaBien();
-			}
-
-			if(input_pueblo.esVacio()){
-				todo_bien = false;
-				input_pueblo.hayError();
-			}else{
-				input_pueblo.estaBien();
-			}
-
+		var todo_bien = true;
+		
+		
+		if(input_nombre.esVacio()){
+			todo_bien = false;
+			input_nombre.hayError();
+		}else{
+			input_nombre.estaBien();
 		}
+
+		if(input_apellido.esVacio()){
+			todo_bien = false;
+			input_apellido.hayError();
+		}else{
+			input_apellido.estaBien();
+		}
+
+		if(input_tel1.esVacio() || !input_tel1.estaLleno() || input_tel2.esVacio() || !input_tel2.estaLleno() || input_tel3.esVacio() || !input_tel3.estaLleno()){
+			todo_bien = false;
+			input_tel1.hayError();
+			input_tel2.hayError();
+			input_tel3.hayError();
+		}else{
+			input_tel1.estaBien();
+			input_tel2.estaBien();
+			input_tel3.estaBien();
+		}
+
+		if(input_email.esVacio() || !input_email.esMailValido()){
+			todo_bien = false;
+			input_email.hayError();
+		}else{
+			input_email.estaBien();
+		}
+
+		if(input_pueblo.esVacio()){
+			todo_bien = false;
+			input_pueblo.hayError();
+		}else{
+			input_pueblo.estaBien();
+		}
+
+		
 
 		var fecha = input_ano.getValor()+'-'+input_mes.getValor()+'-'+input_dia.getValor();
 		if(!input_dia.esDiaValido() || !input_mes.esMesValido() || !input_ano.esAnoValido() || fecha < '2015-04-20'){
@@ -169,48 +165,32 @@ function Registro(){
 
 		if(!todo_bien){
 			Main.alerta.mostrar('Hay campos con errores');
-		}else if(!existe_usuario && !check_tyc.checked){
+		}else if(!check_tyc.checked){
 			Main.alerta.mostrar("Debes aceptar los términos y condiciones para continuar");
 		}else{
 			var data = new Object();
 
-			if(!existe_usuario){
-				Main.usuario.nombre = input_nombre.getValor();
-				Main.usuario.apellido = input_apellido.getValor();
-				Main.usuario.telefono = input_tel1.getValor()+input_tel2.getValor()+input_tel3.getValor();
-				Main.usuario.email = input_email.getValor();
-				Main.usuario.pueblo = input_pueblo.getValor();
-				if(check_recibe_info.checked){
-					Main.usuario.recibe_info = 1;
-				}else{
-					Main.usuario.recibe_info = 0;
-				}
+			
+			Main.usuario.nombre = input_nombre.getValor();
+			Main.usuario.apellido = input_apellido.getValor();
+			Main.usuario.telefono = input_tel1.getValor()+input_tel2.getValor()+input_tel3.getValor();
+			Main.usuario.email = input_email.getValor();
+			Main.usuario.pueblo = input_pueblo.getValor();
+			if(check_recibe_info.checked){
+				Main.usuario.recibe_info = 1;
+			}else{
+				Main.usuario.recibe_info = 0;
 			}
+			
 
 			data.usuario = Main.usuario;
 
 			data.fecha_compra = fecha;
 			data.total = input_cantidad_entero.getValor()+'.'+input_cantidad_decimal.getValor();
 			data.lugar = input_lugar.getValor();
-			data.desde = Main.desde;
+			
+			Main.db.guardarParticipacion(data);
 
-			Main.loading.mostrar();
-			$.ajax({
-				url:'api/guardar-participacion/',
-				type:'post',
-				cache:false,
-				data:'data='+json_encode(data),
-				success:onGuardoParticipacion
-			})
-
-		}*/
-	}
-
-	function onGuardoParticipacion(data){
-		Main.loading.ocultar();
-		if(parseInt(data.resultado,10) == 0){
-			Main.alerta.mostrar("Ya has ingresado este recibo.");
-		}else{
 			Main.navegar(3);
 		}
 	}
