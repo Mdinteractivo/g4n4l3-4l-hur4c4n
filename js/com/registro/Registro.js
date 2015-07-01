@@ -201,19 +201,32 @@ function Registro(){
 
 	function resetInputs(){
 		input_nombre.vaciar();
+		input_nombre.estaBien();
 		input_apellido.vaciar();
+		input_apellido.estaBien();
 		input_tel1.vaciar();
+		input_tel1.estaBien();
 		input_tel2.vaciar();
+		input_tel2.estaBien();
 		input_tel3.vaciar();
+		input_tel3.estaBien();
 		input_email.vaciar();
+		input_email.estaBien();
 		input_pueblo.vaciar();
+		input_pueblo.estaBien();
 		
 		input_dia.vaciar();
+		input_dia.estaBien();
 		input_mes.vaciar();
+		input_mes.estaBien();
 		input_ano.vaciar();
+		input_ano.estaBien();
 		input_cantidad_entero.vaciar();
+		input_cantidad_entero.estaBien();
 		input_cantidad_decimal.setValor('00');
+		input_cantidad_decimal.estaBien();
 		input_lugar.vaciar();
+		input_lugar.estaBien();
 		
 		check_tyc.checked = false;
 		check_recibe_info.checked = false;
