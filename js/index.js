@@ -37,7 +37,8 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        Main.SERVER = 'http://192.168.235.153/ganale_al_huracan/public/';
+        //Main.SERVER = 'http://192.168.235.153/ganale_al_huracan/public/';
+        Main.SERVER = 'http://www.ganalealhuracan.com/testing/';
         Main.touchstart = 'touchstart';
         Main.touchend = 'touchend';
         Main.desde = 'T';
