@@ -119,12 +119,12 @@ function Registro(){
 			input_tel3.estaBien();
 		}
 
-		if(input_email.esVacio() || !input_email.esMailValido()){
+		/*if(input_email.esVacio() || !input_email.esMailValido()){
 			todo_bien = false;
 			input_email.hayError();
 		}else{
 			input_email.estaBien();
-		}
+		}*/
 
 		if(input_pueblo.esVacio()){
 			todo_bien = false;
@@ -136,7 +136,7 @@ function Registro(){
 		
 
 		var fecha = input_ano.getValor()+'-'+input_mes.getValor()+'-'+input_dia.getValor();
-		if(!input_dia.esDiaValido() || !input_mes.esMesValido() || !input_ano.esAnoValido() || fecha < '2015-04-20'){
+		if(!input_dia.esDiaValido() || !input_mes.esMesValido() || !input_ano.esAnoValido() || fecha < '2015-07-13' || fecha > '2015-09-20'){
 			todo_bien = false;
 			input_dia.hayError();
 			input_mes.hayError();
